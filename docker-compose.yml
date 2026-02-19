@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:15
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+  
+  redis:
+    image: redis:7
+    volumes:
+      - ./db/redis.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+
+  worker:
+    build: ./worker
+    volumes:
+      - ./:/code
