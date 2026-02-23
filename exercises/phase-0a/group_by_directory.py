@@ -10,6 +10,7 @@ def group_by_directory(file_path: List[str]) -> dict[str, List[str]]:
     Returns:
         dict[str, List[str]]: A dictionary where the keys are directory paths and the values are lists of file names in those directories.
     """
+    
     grouped_files = {}
 
     for f in file_path:
