@@ -30,7 +30,10 @@ class FileChunk:
     
     def __repr__ (self) -> str:
         """
-        prints as FileChunk(path='src/main.py', index=0, words=42)
+        Prints as FileChunk(path='src/main.py', index=0, words=42)
+
+        Returns:
+            str: A string representation of the FileChunk instance.
         """
 
         return f"FileChunk(path='{self.path}', index={self.chunk_index}, words={self.word_count()})"

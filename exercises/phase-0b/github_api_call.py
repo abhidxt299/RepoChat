@@ -27,5 +27,5 @@ async def get_repo_summary (owner: str, repo: str) -> None:
 
 if __name__ == "__main__":
     owner = "tiangolo"
-    repo = "fastap"
+    repo = "fastapi"
     asyncio.run(get_repo_summary(owner, repo))
