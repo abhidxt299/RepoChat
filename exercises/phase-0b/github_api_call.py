@@ -2,6 +2,17 @@ import httpx
 import asyncio
 
 async def get_repo_summary (owner: str, repo: str) -> None:
+    """
+    Fetches the summary of a GitHub repository, including its description, star count, fork count, primary language, open issues count, and default branch.
+    
+    Args:
+        owner (str): The owner of the repository.
+        repo (str): The name of the repository.
+    
+    Returns:
+        None: Prints the repository summary to the console.
+    """
+
     url = f"https://api.github.com/repos/{owner}/{repo}"
 
     header = {
