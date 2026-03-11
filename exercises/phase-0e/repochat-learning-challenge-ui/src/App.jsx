@@ -9,15 +9,6 @@ export default function App() {
   const [text, setText] = useState("")
   const [count, setCount] = useState(0)
 
-  const handleKeyDown = (e) => {
-    if (e.key === 'Backspace') {
-      setText("")
-    }
-    if (e.key === 'Enter') {
-      console.log ("Entered text: ", text)
-    }
-  }
-
   return (
     <>
     {/*First Challenge = Create a profile section with your name, title, and a short bio.*/}

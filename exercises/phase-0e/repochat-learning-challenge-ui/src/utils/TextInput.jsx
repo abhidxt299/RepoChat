@@ -1,7 +1,7 @@
 export function TextInput ({ text, setText }) {
     const handleKeyDown = (e) => {
         if (e.key === 'Backspace') {
-            setText("")
+            setText(prevText => prevText.slice(0, -1))
         }
         if (e.key == 'Enter') {
             console.log("Entered text: ", text)
