@@ -1,4 +1,4 @@
-export function Count({ count, setCount}) {
+export function Count({ count, setCount }) {
     return (
         <div>
             <h2> Count: {count} </h2>

@@ -17,17 +17,27 @@ export default function CoinFlip() {
                 ...prevCount,
                 [outcome]: prevCount[outcome] + 1
             }))
-        })
-        setStatus("done")
+            setStatus("done")
+        }, 1000)
     }
 
     return (
-        <div>
-            <button onClick={coinFlip} disabled={status === "flipping"}> Flip Coin </button>
-            {status === "flipping" && <p> Flipping... </p>}
-            {status === "done" && <p> Result: {result} </p>}
-            <p> Heads count: {count.heads} </p>
-            <p> Tails count: {count.tails} </p>
+        <div className = 'coinFlip'>
+            <button 
+                onClick = { coinFlip } 
+                disabled = { status === "flipping" }
+            > 
+            { status === "flipping" ? "Flipping..." : "Flip Coin" } 
+            </button>
+            { status === "flipping" && <p>🪙 The coin is in the air...</p> }
+            { status === "done" && (
+                <div>
+                    <p> Result: {result.toUpperCase()} </p>
+                    <p> Heads count: {count.heads} </p>
+                    <p> Tails count: {count.tails} </p>
+                </div>
+                ) 
+            }
         </div>
     )
 }

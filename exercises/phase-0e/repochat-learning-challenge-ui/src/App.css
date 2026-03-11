@@ -40,3 +40,27 @@
 .read-the-docs {
   color: #888;
 }
+
+.repo-cards {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+ul li button {
+  margin-left: 18px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+input {
+  padding: 6px;
+  font-size: 14px;
+  width: 200px;
+  margin-right: 18px;
+}
+
+.count {
+  margin-left: 20px;
+  margin-right: 20px;
+}
